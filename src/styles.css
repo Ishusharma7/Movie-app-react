@@ -1,0 +1,217 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.movie-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  margin-top: 20px;
+  padding-left: 10px; /* Adjust the padding to make space for the left button */
+  padding-right: 10px; /* Adjust the padding to make space for the right button */
+}
+.movie-name {
+  flex: 0 0 auto;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 13em;
+  left: 60px;
+  display: flex;
+  pointer-events: none;
+}
+.card-container {
+  position: relative;
+  flex: 0 0 auto;
+  margin-right: 10px;
+  width: 200px;
+  height: 290px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  padding-bottom: 2.5em;
+  transition: width 0.5s ease;
+  margin: 0;
+}
+.card-container:hover {
+  width: 400px;
+}
+.card-container img {
+  width: 100%;
+  height: 18em;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+.movie-container {
+  position: relative;
+}
+
+.navigation-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: transparent;
+  font-size: 3em;
+  font-weight: bolder;
+}
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+.title {
+  color: white;
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 30px;
+  z-index: 1;
+}
+.runtime {
+  width: 100%;
+  white-space: nowrap;
+}
+.rated {
+  white-space: nowrap;
+  border: 2px solid white;
+}
+.imge:hover {
+  opacity: 0.5;
+}
+.hidden {
+  display: none;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+h2 {
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  width: 90%;
+}
+h1 {
+  color: yellow;
+}
+.rated,
+.runtime,
+.year {
+  font-size: 20px;
+  color: white;
+  z-index: 1;
+  flex: 1;
+  margin: 10px;
+}
+
+.card-container:hover .movie-name {
+  opacity: 1;
+}
+.A {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.A p {
+  margin-right: 10px; /* Optional: Add some spacing between the elements */
+}
+.B {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.B p {
+  margin-right: 10px; /* Optional: Add some spacing between the elements */
+}
+.modalComponent h1 {
+  color: #ffffff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  -webkit-text-stroke: 0.8px;
+  -webkit-text-stroke-color: #000;
+}
+.modalComponent img {
+  border-radius: 5px;
+  border: solid 2px rgb(78, 78, 78);
+}
+.modalComponent {
+  border: 2px solid #000;
+  background: gray;
+  box-shadow: 2px solid black;
+  border-radius: 10px;
+  margin: auto;
+  padding: auto;
+  margin-top: 200px;
+  max-height: 650px;
+  max-width: 500px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  left: 30%;
+  bottom: 20%;
+}
+.fea,.fav{
+  display: inline;
+  padding: 10px;
+  font-size: larger;
+  color: yellow;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.fav{
+  position: relative;
+  left: 70%;
+}
+.heart-icon{
+  border: transparent;
+  background-color: transparent;
+  color: white;
+   position: relative;
+  bottom: 1.2em;
+  font-size: 30px;
+  cursor: pointer;
+}
+.heart-icon2{
+  border: transparent;
+  background-color: transparent;
+  color: red;
+  position: relative;
+  bottom: 1.2em;
+  font-size: 30px;
+  cursor: pointer;
+}
+.imge{
+  height: 200px;
+}
+.thumbnail{
+  height: 280px;
+}
