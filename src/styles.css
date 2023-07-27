@@ -181,15 +181,21 @@ h1 {
 .fea,.fav{
   display: inline;
   padding: 10px;
-  font-size: larger;
+  font-size: 22px;
   color: yellow;
   background-color: transparent;
   border: transparent;
   cursor: pointer;
+  font-weight: bolder;
+}
+.fea{
+  position: relative;
+  bottom: 2.5em;
 }
 .fav{
   position: relative;
-  left: 70%;
+  left: 80%;
+  bottom: 3.5em;
 }
 .heart-icon{
   border: transparent;
@@ -214,4 +220,9 @@ h1 {
 }
 .thumbnail{
   height: 280px;
+}
+.noFav{
+  color: yellow;
+  font-size: 30px;
+  font-weight: bolder;
 }

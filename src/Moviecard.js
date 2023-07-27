@@ -40,9 +40,72 @@ const Moviecard = ({ movie }) => {
   };
   const handleClicks = (event) => {
     event.stopPropagation();
+
+
+    const Favorites = localStorage.getItem('Favorites');
+    let FavoritesArray = [];
+  
+    if (Favorites) {
+      FavoritesArray = JSON.parse(Favorites);
+    }
+  
+    const index = FavoritesArray.findIndex((favMovie) => favMovie.Title === movie.Title);
+    if (index > -1) {
+      FavoritesArray.splice(index, 1);
+    } else {
+      FavoritesArray.push(movie);
+    }
+  
+    localStorage.setItem('Favorites', JSON.stringify(FavoritesArray));
+  
+
+
+
+
+
+
+
+
+    const favorites = localStorage.getItem('favorites');
+    let favoritesArray = [];
+  
+    if (favorites) {
+      favoritesArray = JSON.parse(favorites);
+    }
+  
+    const indexe = favoritesArray.indexOf(movie.Title);
+    if (indexe > -1) {
+      // Remove from favorites
+      favoritesArray.splice(indexe, 1);
+    } else {
+      // Add to favorites
+      favoritesArray.push(movie.Title);
+    }
+  
+    localStorage.setItem('favorites', JSON.stringify(favoritesArray));
+
+
+
+
+
+
+
+
+
     setIsClicked(!isClicked);
     handleHover();
-  }
+
+  };
+
+  useEffect(()=>{const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  favorites.forEach((title) => {
+    // console.log(title)
+    if (movie.Title === title) {
+      setIsClicked(!isClicked);
+    }
+  });
+  },[]);
+   
 
   return (
     <div
@@ -83,7 +146,7 @@ const Moviecard = ({ movie }) => {
         {/* creating a thumbnail to appear on hover */}
         {/* hiding thumbnail when curser not on the image */}
         <div className={isHovered ? "movie-name" : "hidden"}>
-          <p className="title">{movie.Title}</p>
+          <p className="Title">{movie.Title}</p>
           <p className="rated">{movie.Rated}</p>
           <p className="year">{movie.Year}</p>
           <p className="runtime">{movie.Runtime}</p>
@@ -99,7 +162,7 @@ const Moviecard = ({ movie }) => {
         </div>
       </div>
       <div>
-      <h2 className="titles">{movie.Title}</h2>
+      <h2 className="Titles">{movie.Title}</h2>
       </div>
     </div>
   );

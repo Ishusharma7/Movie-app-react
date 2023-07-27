@@ -49,7 +49,7 @@ const Card = ({ Genre }) => {
         movieRowRef.current.removeEventListener("scroll", handleScroll);
       }
     };
-  }, []);
+  });
 
   // scrolling left
   const scrollLeft = () => {
