@@ -17,7 +17,6 @@ export default function App() {
           <Route exact path="/Favorites" element={<Favorites />} />
       </Routes>
       </Router>
-      <Movie/>
     </>
   );
 }

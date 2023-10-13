@@ -2,9 +2,9 @@
     background-color: white;
     position: relative;
     left: 30%;
-    width: 30%;
+    width: 20%;
     border-radius: 10px;
-    height: 2.5rem;
+    height: 3rem;
     padding: 0 15px;
     display: flex;
     align-items: center;
@@ -13,11 +13,23 @@
     background-color: transparent;
     border: none;
     height: 100%;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     width: 100%;
     margin-left: 5px;
   }
   input:focus {
     outline: none;
   }
+  @media screen and (max-width: 400px) {
+    .input-wrapper{
+      position: relative;
+      top: 3rem;
+      left: 3rem;
+      width: 10rem;
+      height: 2.5rem;
+    }
+    input{
+      font-size: 1rem;
+    }
+}
   

@@ -30,7 +30,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding-bottom: 30px;
+  padding: 1rem;
   padding-bottom: 2.5em;
   transition: width 0.5s ease;
   margin: 0;
@@ -159,6 +159,8 @@ h1 {
 }
 .modalComponent img {
   border-radius: 5px;
+  min-height: 15rem;
+  min-width: 25rem;
   border: solid 2px rgb(78, 78, 78);
 }
 .modalComponent {
@@ -169,19 +171,20 @@ h1 {
   margin: auto;
   padding: auto;
   margin-top: 200px;
-  max-height: 650px;
-  max-width: 500px;
-  font-size: 14px;
+  max-width: 55rem;
+  font-size: 1.5rem;
   color: #ffffff;
   text-align: center;
-  position: absolute;
-  left: 30%;
-  bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 .fea,.fav{
   display: inline;
   padding: 10px;
-  font-size: 22px;
+  font-size: 2rem;
   color: yellow;
   background-color: transparent;
   border: transparent;
@@ -190,12 +193,12 @@ h1 {
 }
 .fea{
   position: relative;
-  bottom: 2.5em;
+  bottom: 2em;
 }
 .fav{
   position: relative;
-  left: 80%;
-  bottom: 3.5em;
+  left: 85%;
+  bottom: 3em;
 }
 .heart-icon{
   border: transparent;
@@ -225,4 +228,35 @@ h1 {
   color: yellow;
   font-size: 30px;
   font-weight: bolder;
+}
+@media screen and (max-width: 400px) {
+  .fea,.fav{
+    font-size: 1rem;
+    padding: 0%;
+  }
+  .fav{
+    position: relative;
+    left: 60%;
+    bottom: 4em;
+  }
+  .fea{
+    position: relative;
+    bottom: 2.7rem;
+    right: 2rem;
+  }
+  .modalComponent {
+    max-width: 20rem;
+    font-size: .8rem;
+    position: relative;
+    bottom: 10rem;
+  }
+  .modalComponent img {
+    max-width: 15rem;
+    max-height: 12rem;
+    min-width: 2rem;
+    min-height: 2rem;
+  }
+  .card-container{
+    padding: 0%;
+  }
 }
